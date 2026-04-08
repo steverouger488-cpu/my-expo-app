@@ -1,9 +1,6 @@
 name: Build Android APK
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
@@ -20,18 +17,13 @@ jobs:
         with:
           node-version: 18.x
 
+      - name: Install EAS CLI
+        run: npm install -g eas-cli
+
       - name: Install dependencies
         run: npm install
 
-      - name: Setup Expo and EAS
-        uses: expo/expo-github-action@v8
-        with:
-          eas-version: latest
-          token: ${{ secrets.EXPO_TOKEN }}
-
       - name: Build APK
         run: eas build --platform android --profile preview --non-interactive
-
-      - name: Print download link
-        run: echo "Build complete! Download your APK from https://expo.dev"
-        
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}

@@ -35,7 +35,11 @@
           "cameraPermission": "Allow My Shop to use the camera."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "f4454ddc-a7eb-4e28-92ce-ec53b251bc4f"
+      }
+    }
   }
 }
-

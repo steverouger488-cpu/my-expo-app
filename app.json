@@ -11,7 +11,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#0f0f14"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
@@ -33,11 +35,7 @@
           "cameraPermission": "Allow My Shop to use the camera."
         }
       ]
-    ],
-    "extra": {
-      "eas": {
-        "projectId": "f4454ddc-a7eb-4e28-92ce-ec53b251bc4f"
-      }
-    }
+    ]
   }
 }
+
